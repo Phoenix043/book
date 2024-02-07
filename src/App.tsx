@@ -24,7 +24,7 @@ const App: React.FC = () => {
         <Navbar searchTerm={searchTerm} onSearchChange={setSearchTerm}/>
         <div>
           <Routes>
-            <Route path="/" element={<Books searchTerm={searchTerm} onSearchChange={setSearchTerm}/>}></Route>
+            <Route path="/" element={<Books searchTerm={searchTerm}/>}></Route>
             <Route path="/signin" element={<SignInForm/>}></Route>
             <Route path="/Help" element={<Help />}></Route>
             <Route path="/Contact" element={<Contact/>}></Route>

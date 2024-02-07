@@ -11,7 +11,7 @@ const SignInForm: React.FC= () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [confirmPassword, setConfirmPassword] = useState<string>('');
-  const { nightMode, setNightMode } = useTheme();
+  const { nightMode } = useTheme();
 
   const handleSignIn = () => {
     if (!firstName || !lastName || !email || !password || !confirmPassword) {

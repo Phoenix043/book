@@ -4,7 +4,7 @@ import { useTheme } from '../Theme/ThemeContext';
 
 
 const Footer: React.FC = () => {
-  const { nightMode, setNightMode } = useTheme();
+  const { nightMode} = useTheme();
 
   const mode = `text-${nightMode?"white":"black"}`;
   const background=`bg-${nightMode?'black':'white'}`

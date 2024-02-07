@@ -1,4 +1,3 @@
-// Books.tsx
 import React, { useState, useEffect } from 'react';
 import RatingStars from 'react-rating-stars-component';
 import { useTheme } from '../Theme/ThemeContext';
@@ -18,13 +17,12 @@ interface Book {
 }
 interface BooksProps {
     searchTerm: string;
-    onSearchChange: (value: string) => void;
   }
 
-  const Books: React.FC<BooksProps> = ({ searchTerm, onSearchChange }) => {
+  const Books: React.FC<BooksProps> = ({ searchTerm}) => {
     const [books, setBooks] = useState<Book[]>([]);
-    const {nightMode,setNightMode}=useTheme()
-
+    const {nightMode}=useTheme()
+  
   useEffect(() => {
     const fetchBooks = async () => {
       try {
@@ -48,7 +46,7 @@ interface BooksProps {
     alert(`Book with ID ${id} clicked`);
   };
   const mode = `text-${nightMode?"white":"black"}`;
-  const background=`bg-${nightMode?'black':'white'}`
+  // const background=`bg-${nightMode?'black':'white'}`
 
   return (
     <>

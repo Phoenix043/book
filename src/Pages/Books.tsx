@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import RatingStars from 'react-rating-stars-component';
+import Rating from 'react-rating-stars-component';
 import { useTheme } from '../Theme/ThemeContext';
 
 
@@ -67,7 +67,7 @@ interface BooksProps {
                 className="w-36 h-48 object-cover mb-8 transition-transform transform hover:scale-110"
               />
               <p className={`${mode}`}>Categories: {book.categories|| "Others"}</p>
-              <RatingStars
+              <Rating
                 count={5}
                 value={book.averageRating}
                 size={40}

@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import { BrowserRouter as Router, Route ,Routes} from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Books from './Pages/Books';
 import Help from './Pages/Help';
 import Contact from './Pages/Contact';
-import { ThemeProvider, useTheme } from './Theme/ThemeContext';
+import { ThemeProvider } from './Theme/ThemeContext';
 
 
 const App: React.FC = () => {

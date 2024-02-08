@@ -53,7 +53,7 @@ const SignInForm: React.FC= () => {
 
   return (
     <div className={`bg-${nightMode?'black':"white"} w-full p-12`}>
-    <div className={`max-w-md mx-auto p-8 bg-${nightMode?"black":"white"} rounded shadow-md border-4 border-yellow-300 border-y-red-600`}>
+    <div className={`max-w-md mx-auto p-8 rounded shadow-md border-4 border-yellow-300 border-y-red-600`}>
     <h2 className={`text-2xl ${nightMode ? 'text-green-600' : 'text-blue-600'} font-bold mb-4 flex`}>
     <u>Sign In</u><span className="my-1.5"><Icon.Smile /></span>
     </h2>

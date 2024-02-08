@@ -56,7 +56,7 @@ interface BooksProps {
           {filteredBooks.map(book => (
             <div
               key={book.id}
-              className={`bg-${nightMode?'black':"white"} p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer flex flex-col items-center border-4 border-yellow-300 border-y-red-600`}
+              className={`p-4 rounded-md transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer flex flex-col items-center border-4 border-yellow-300 border-y-red-600`}
               onClick={() => handleBookClick(book.id)}
             >
               <h2 className={`text-lg ${mode} font-bold mb-2`}>{book.title}</h2>

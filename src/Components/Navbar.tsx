@@ -21,18 +21,18 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, onSearchChange }) => {
   };
 
   return (
-    <nav className={`bg-${nightMode?'black':'white'} p-4 relative border-b ${nightMode?"border-white": "border-black"} `}>
+    <nav className={`bg-${nightMode ? 'black' : 'white'} text-${nightMode ? 'white' : 'black'} p-4 relative border-b ${nightMode ? 'border-white' : 'border-black'}`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className={`text-${nightMode?'white':'black'} font-bold`}>
         <Link to='/'>
-          <div className={`img-container bg-${nightMode ? 'black' : 'white'}`}>
+          <div className={`img-container`}>
             <img src={`${Logo}`} alt="Book Logo" className={`object-cover rounded-full h-17 w-16`} />
           </div>
         </Link>
         </div>
         <div className={`md:hidden`}>
           <button
-            className={`text-${nightMode?'white':'black'} p-2 focus:outline-none`}
+            className={`p-2 focus:outline-none`}
             onClick={() => setShowMenu(!showMenu)}
           >
              <svg
@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, onSearchChange }) => {
           </button>
         </div>
         {showMenu && (
-          <div className= {`md:hidden absolute top-16 right-4 text-${nightMode?'white':'black'} p-4 rounded shadow-md z-10 bg-${nightMode?'black':'white'}`}>
+          <div className={`md:hidden absolute top-16 right-4 text-${nightMode ? 'white' : 'black'} p-4 rounded shadow-md z-10 bg-${nightMode ? 'black' : 'white'}`}>
             <button className={`block mb-2 text-${nightMode?'white':'black'}`} onClick={closeMenu}>
               <Link to='/Contact'>Contact</Link>
             </button>
@@ -68,18 +68,15 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, onSearchChange }) => {
           value={searchTerm}
           onChange={(e) => onSearchChange(e.target.value)}
           />
-        <div className={`md:flex md:items-center md:space-x-8 hidden`}>
+        <div className={`md:flex md:items-center md:space-x-8 hidden text-${nightMode?'white':'black'}`}>
          
-        <button className={`text-${nightMode?'white':'black'} border-2 ${nightMode?"border-rose-500": "border-black"} px-4 py-2 rounded transition-transform transform hover:scale-105`}><Link to='/Contact'>Contact</Link></button>
-          <button className={`text-${nightMode?'white':'black'} border-2 ${nightMode?"border-rose-500": "border-black"} px-4 py-2 rounded transition-transform transform hover:scale-105`}><Link to='/Help'>Help</Link></button>
-          <button className={`text-${nightMode?'white':'black'} border-2 ${nightMode?"border-rose-500": "border-black"} px-4 py-2 rounded transition-transform transform hover:scale-105`}><Link to='/signin'> Login</Link></button>
+        <button className={` border-2 ${nightMode?"border-rose-500": "border-black"} px-4 py-2 rounded transition-transform transform hover:scale-105`}><Link to='/Contact'>Contact</Link></button>
+          <button className={` border-2 ${nightMode?"border-rose-500": "border-black"} px-4 py-2 rounded transition-transform transform hover:scale-105`}><Link to='/Help'>Help</Link></button>
+          <button className={`border-2 ${nightMode?"border-rose-500": "border-black"} px-4 py-2 rounded transition-transform transform hover:scale-105`}><Link to='/signin'> Login</Link></button>
         </div>
-        <button
-        className="text-white p-2 focus:outline-none"
-        onClick={toggleNightMode}
-      >
-        {nightMode ? <Sun size={20} /> : <Moon size={20} color='black'/>}
-      </button>
+        <button className="text-white p-2 focus:outline-none" onClick={toggleNightMode}>
+            {nightMode ? <Sun size={20} /> : <Moon size={20} color='black' />}
+        </button>
       </div>
     </nav>
   );

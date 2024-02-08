@@ -12,7 +12,7 @@ interface ThemeContextProps {
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
-  const [nightMode, setNightMode] = useState<boolean>(true);
+  const [nightMode, setNightMode] = useState<boolean>(false);
 
   return (
     <ThemeContext.Provider value={{ nightMode, setNightMode }}>

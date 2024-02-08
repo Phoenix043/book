@@ -46,11 +46,10 @@ interface BooksProps {
     alert(`Book with ID ${id} clicked`);
   };
   const mode = `text-${nightMode?"white":"black"}`;
-  // const background=`bg-${nightMode?'black':'white'}`
-
+  const background = { backgroundColor: nightMode ? 'black' : 'white' };
   return (
     <>
-    <div className={`bg-${nightMode?'black':"white"} w-full`}>
+    <div style={background} className={` w-full`}>
       <div className="container mx-auto p-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-12">
           {filteredBooks.map(book => (

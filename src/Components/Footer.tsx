@@ -5,10 +5,10 @@ const Footer: React.FC = () => {
   const { nightMode } = useTheme();
 
   const mode = `text-${nightMode ? "white" : "black"}`;
-  const background = `bg-${nightMode ? 'black' : 'white'}`;
+  const background = { backgroundColor: nightMode ? 'black' : 'white' };
 
   return (
-    <footer className={`${mode} ${background} p-4 border-t ${nightMode ? "border-white" : "border-black"}`}>
+    <footer style={background} className={`${mode}  p-4 border-t ${nightMode ? "border-white" : "border-black"}`}>
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div>

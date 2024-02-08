@@ -19,9 +19,10 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, onSearchChange }) => {
   const closeMenu = () => {
     setShowMenu(false);
   };
+  const background = { backgroundColor: nightMode ? 'black' : 'white' };
 
   return (
-    <nav className={`bg-${nightMode ? 'black' : 'white'} text-${nightMode ? 'white' : 'black'} p-4 relative border-b ${nightMode ? 'border-white' : 'border-black'}`}>
+    <nav  style={background} className={` text-${nightMode ? 'white' : 'black'} p-4 relative border-b ${nightMode ? 'border-white' : 'border-black'}`}>
       <div className="container mx-auto flex justify-between items-center">
         <div className={`text-${nightMode?'white':'black'} font-bold`}>
         <Link to='/'>
@@ -49,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ searchTerm, onSearchChange }) => {
           </button>
         </div>
         {showMenu && (
-          <div className={`md:hidden absolute top-16 right-4 text-${nightMode ? 'white' : 'black'} p-4 rounded shadow-md z-10 bg-${nightMode ? 'black' : 'white'}`}>
+          <div className={`md:hidden absolute top-16 right-4 text-${nightMode ? 'white' : 'black'} p-4 rounded shadow-md z-10`}>
             <button className={`block mb-2 text-${nightMode?'white':'black'}`} onClick={closeMenu}>
               <Link to='/Contact'>Contact</Link>
             </button>

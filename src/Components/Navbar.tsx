@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Moon,Sun } from 'react-feather'
 import { useTheme } from '../Theme/ThemeContext';
-// import Logo from '../assets/logo.png'
+
 interface NavbarProps {
   searchTerm: string;
   onSearchChange: (value: string) => void;

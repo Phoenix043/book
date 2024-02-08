@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
   const background=`bg-${nightMode?'black':'white'}`
   console.log(nightMode)
   return (
-    <footer className={`bg-${nightMode?'black':'white'} bg-black p-4 border-t ${nightMode?"border-white":"border-black"}`}>
+    <footer className={`bg-${nightMode?'black':'white'} p-4 border-t ${nightMode?"border-white":"border-black"}`}>
       <div className={`container mx-auto ${mode}`}>
         <div className= {`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4`}>
           <div>
